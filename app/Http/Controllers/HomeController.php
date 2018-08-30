@@ -23,6 +23,17 @@ class HomeController extends Controller
      */
     public function index()
     {
+        /*
+        $mail = $request->input('email');
+        $data = [
+            'email' => $email,
+            'ftid' => $ftid,
+            'name' => $name,
+        ];
+        $email = User::where('email', $mail)->first();
+        return View::make('home')
+            ->with($data);
+        */
         return view('home');
     }
 }

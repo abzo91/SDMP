@@ -28,4 +28,29 @@ Route::get('/verify-user/{code}', 'Auth\ForgotPasswordController@activateUser')-
 Route::post('password/resets', [
     'as' => 'password.emailcustomized',
     'uses' => 'Auth\ForgotPasswordController@checkmailexists'
-  ]);
+]);
+
+Route::get('/alertbox', function () {
+    return view('home');
+});
+
+Route::get('fireevent', 'NotificationsAll@index');
+
+Route::get('administration', [
+    'as' => 'administrator',
+    'uses' => 'AdminPageController@index'
+]);
+
+Route::patch('administration', [
+    'as' => 'administrator',
+    'uses' => 'AdminPageController@update'
+]);
+
+Route::post('administration', [
+    'as' => 'ldapupdate',
+    'uses' => 'AdminPageController@autoupdate'
+]);
+
+Route::post('/notification/get', 'NotificationsAll@get');
+
+Route::post('/notification/read', 'NotificationsAll@read');

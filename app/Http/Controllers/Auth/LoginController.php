@@ -36,12 +36,12 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
-    /*
+    
     protected function credentials(\Illuminate\Http\Request $request)
     {
         $credentials = $request->only($this->username(), 'password');
 
-        return array_add($credentials, 'activation_code', NULL);
+        return array_add($credentials, 'status', 1);
     }
-    */
+    
 }

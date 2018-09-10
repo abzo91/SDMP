@@ -15,8 +15,30 @@ window.Vue = require('vue');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('example-component', require('./components/ExampleComponent.vue'));
+Vue.component('notification', require('./components/Notification.vue'));
 
 const app = new Vue({
-    el: '#app'
+    el: '#app',
+    created() {
+        Echo.channel('channelDemoEvent')
+        .listen('eventTrigger', (e) => {
+            alert('Meeting in 5 minutes');
+        });
+    }
+});
+
+const app1 = new Vue({
+    el: '#app1',
+    data: {
+        notifications: ''
+    },
+    created() {
+        axios.post('/notification/get').then(response => {
+            this.notifications = response.data;
+        });
+        var userId = $('meta[name="userId"]').attr('content');
+        Echo.private('App.User.' + userId).notification((notification) => {
+            this.notifications.push(notification);
+        });
+    }
 });

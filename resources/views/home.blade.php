@@ -702,9 +702,9 @@
       <!-- /.content -->
     </div>
     <!-- /.content-wrapper -->
-    
+    <!--
     <div><a id="app" href="fireevent">fireevent</a></div>
-    
+    -->
     <footer class="footer">
       &nbsp;
       <div class="footericons">

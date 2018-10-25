@@ -10,19 +10,22 @@ use Illuminate\Broadcasting\PresenceChannel;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
+use App\User;
 
 class eventTrigger implements ShouldBroadcast
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
+
+    public $userss;
 
     /**
      * Create a new event instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($userss)
     {
-        //
+        $this->userss = $userss;
     }
 
     /**
@@ -32,10 +35,11 @@ class eventTrigger implements ShouldBroadcast
      */
     public function broadcastOn()
     {
-        if(auth()->check()) {
+        if(Auth::check() && Auth::user()->role_id == "1") {
             // && auth()->user()->status == "0"
             // && auth()->user()->role == "XXXX"
-        return new Channel('channelDemoEvent');
+            //$userss = User::where('role_id','=','2')->get();
+            return new PrivateChannel('App.User.' . $this->userss->id);
         }
         return true;
     }

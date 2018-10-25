@@ -13,7 +13,11 @@
 
 Route::get('/', function () {
     if(Auth::check()) {
-        return view('home');
+        if(Auth::user()->role_id == 1) {
+            return view('qoshome');
+        } else {
+            return view('home');
+        }
     } else {
         return view('auth.login');
     }
@@ -54,3 +58,28 @@ Route::post('administration', [
 Route::post('/notification/get', 'NotificationsAll@get');
 
 Route::post('/notification/read', 'NotificationsAll@read');
+
+Route::get('co_creation', [
+    'as' => 'co_creation',
+    'uses' => 'CallObservationController@index'
+]);
+
+Route::post('co_creation', [
+    'as' => 'co_creation',
+    'uses' => 'CallObservationController@create'
+]);
+
+Route::get('qos_creation', [
+    'as' => 'qos_creation',
+    'uses' => 'QOSDashboardController@index'
+]);
+
+Route::post('qos_creation', [
+    'as' => 'qos_creation',
+    'uses' => 'QOSDashboardController@store'
+]);
+
+Route::post('imageupload', [
+    'as' => 'imageupload',
+    'uses' => 'ImageUploadController@store'
+]);

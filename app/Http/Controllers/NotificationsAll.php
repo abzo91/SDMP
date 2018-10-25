@@ -23,6 +23,7 @@ class NotificationsAll extends Controller
         $userss = User::where('role_id','=','2')->get();
         foreach($userss as $userwithrole) {
             $userwithrole->notify(new NotifyUsersMeeting());
+            event(new eventTrigger($userwithrole));
             //$userwithrole->notify(new NotifyUsersMeeting($userwithrole));
         }
         //$users = DB::table('users')->where('role_id', 2)->get();

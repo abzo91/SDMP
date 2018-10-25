@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -34,6 +36,12 @@ class HomeController extends Controller
         return View::make('home')
             ->with($data);
         */
-        return view('home');
+        $users = DB::select('select * from users where role_id = "2"');
+        if (Auth::user()->role_id == 1)
+        {
+            return view('qoshome')->with(compact('users'));
+        } else {
+            return view('home')->with(compact('users'));
+        }
     }
 }

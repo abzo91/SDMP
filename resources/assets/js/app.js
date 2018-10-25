@@ -16,7 +16,7 @@ window.Vue = require('vue');
  */
 
 Vue.component('notification', require('./components/Notification.vue'));
-
+/*
 const app = new Vue({
     el: '#app',
     created() {
@@ -26,7 +26,7 @@ const app = new Vue({
         });
     }
 });
-
+*/
 const app1 = new Vue({
     el: '#app1',
     data: {
@@ -39,6 +39,9 @@ const app1 = new Vue({
         var userId = $('meta[name="userId"]').attr('content');
         Echo.private('App.User.' + userId).notification((notification) => {
             this.notifications.push(notification);
+        });
+        Echo.private('App.User.' + userId).listen('eventTrigger', (e) => {
+            alert('Meeting in 5 minutes');
         });
     }
 });

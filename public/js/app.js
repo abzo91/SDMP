@@ -13904,16 +13904,17 @@ window.Vue = __webpack_require__(38);
  */
 
 Vue.component('notification', __webpack_require__(41));
-
-var app = new Vue({
+/*
+const app = new Vue({
     el: '#app',
-    created: function created() {
-        Echo.channel('channelDemoEvent').listen('eventTrigger', function (e) {
+    created() {
+        Echo.channel('channelDemoEvent')
+        .listen('eventTrigger', (e) => {
             alert('Meeting in 5 minutes');
         });
     }
 });
-
+*/
 var app1 = new Vue({
     el: '#app1',
     data: {
@@ -13928,6 +13929,9 @@ var app1 = new Vue({
         var userId = $('meta[name="userId"]').attr('content');
         Echo.private('App.User.' + userId).notification(function (notification) {
             _this.notifications.push(notification);
+        });
+        Echo.private('App.User.' + userId).listen('eventTrigger', function (e) {
+            alert('Meeting in 5 minutes');
         });
     }
 });
@@ -13951,9 +13955,9 @@ window.Popper = __webpack_require__(3).default;
  */
 
 try {
-  window.$ = window.jQuery = __webpack_require__(4);
+    window.$ = window.jQuery = __webpack_require__(4);
 
-  __webpack_require__(16);
+    __webpack_require__(16);
 } catch (e) {}
 
 /**
@@ -13975,9 +13979,9 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 var token = document.head.querySelector('meta[name="csrf-token"]');
 
 if (token) {
-  window.axios.defaults.headers.common['X-CSRF-TOKEN'] = token.content;
+    window.axios.defaults.headers.common['X-CSRF-TOKEN'] = token.content;
 } else {
-  console.error('CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token');
+    console.error('CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token');
 }
 
 /**
@@ -13991,10 +13995,10 @@ if (token) {
 window.Pusher = __webpack_require__(37);
 
 window.Echo = new __WEBPACK_IMPORTED_MODULE_0_laravel_echo___default.a({
-  broadcaster: 'pusher',
-  key: "f6c897cce0cee711452f",
-  cluster: "eu",
-  encrypted: false
+    broadcaster: 'pusher',
+    key: "f6c897cce0cee711452f",
+    cluster: "eu",
+    encrypted: false
 });
 
 /***/ }),
@@ -14015,7 +14019,7 @@ window.Echo = new __WEBPACK_IMPORTED_MODULE_0_laravel_echo___default.a({
   var undefined;
 
   /** Used as the semantic version number. */
-  var VERSION = '4.17.10';
+  var VERSION = '4.17.11';
 
   /** Used as the size to enable large array optimizations. */
   var LARGE_ARRAY_SIZE = 200;
@@ -14279,7 +14283,7 @@ window.Echo = new __WEBPACK_IMPORTED_MODULE_0_laravel_echo___default.a({
   var reHasUnicode = RegExp('[' + rsZWJ + rsAstralRange  + rsComboRange + rsVarRange + ']');
 
   /** Used to detect strings that need a more robust regexp to match words. */
-  var reHasUnicodeWord = /[a-z][A-Z]|[A-Z]{2,}[a-z]|[0-9][a-zA-Z]|[a-zA-Z][0-9]|[^a-zA-Z0-9 ]/;
+  var reHasUnicodeWord = /[a-z][A-Z]|[A-Z]{2}[a-z]|[0-9][a-zA-Z]|[a-zA-Z][0-9]|[^a-zA-Z0-9 ]/;
 
   /** Used to assign default `context` object properties. */
   var contextProps = [
@@ -15225,20 +15229,6 @@ window.Echo = new __WEBPACK_IMPORTED_MODULE_0_laravel_echo___default.a({
       }
     }
     return result;
-  }
-
-  /**
-   * Gets the value at `key`, unless `key` is "__proto__".
-   *
-   * @private
-   * @param {Object} object The object to query.
-   * @param {string} key The key of the property to get.
-   * @returns {*} Returns the property value.
-   */
-  function safeGet(object, key) {
-    return key == '__proto__'
-      ? undefined
-      : object[key];
   }
 
   /**
@@ -17698,7 +17688,7 @@ window.Echo = new __WEBPACK_IMPORTED_MODULE_0_laravel_echo___default.a({
           if (isArguments(objValue)) {
             newValue = toPlainObject(objValue);
           }
-          else if (!isObject(objValue) || (srcIndex && isFunction(objValue))) {
+          else if (!isObject(objValue) || isFunction(objValue)) {
             newValue = initCloneObject(srcValue);
           }
         }
@@ -20619,6 +20609,22 @@ window.Echo = new __WEBPACK_IMPORTED_MODULE_0_laravel_echo___default.a({
         array[length] = isIndex(index, arrLength) ? oldArray[index] : undefined;
       }
       return array;
+    }
+
+    /**
+     * Gets the value at `key`, unless `key` is "__proto__".
+     *
+     * @private
+     * @param {Object} object The object to query.
+     * @param {string} key The key of the property to get.
+     * @returns {*} Returns the property value.
+     */
+    function safeGet(object, key) {
+      if (key == '__proto__') {
+        return;
+      }
+
+      return object[key];
     }
 
     /**
@@ -36919,7 +36925,7 @@ module.exports = Echo;
 /***/ (function(module, exports, __webpack_require__) {
 
 /*!
- * Pusher JavaScript Library v4.3.0
+ * Pusher JavaScript Library v4.3.1
  * https://pusher.com/
  *
  * Copyright 2017, Pusher
@@ -37399,7 +37405,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	"use strict";
 	var Defaults = {
-	    VERSION: "4.3.0",
+	    VERSION: "4.3.1",
 	    PROTOCOL: 7,
 	    host: 'ws.pusherapp.com',
 	    ws_port: 80,
@@ -39935,7 +39941,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            this.emit('error', error);
 	        }
 	        if (action) {
-	            this.emit(action);
+	            this.emit(action, { action: action, error: error });
 	        }
 	    };
 	    return Connection;
@@ -44919,8 +44925,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	        this.connection = null;
 	        this.usingTLS = !!options.useTLS;
 	        this.timeline = this.options.timeline;
-	        this.connectionCallbacks = this.buildConnectionCallbacks();
 	        this.errorCallbacks = this.buildErrorCallbacks();
+	        this.connectionCallbacks = this.buildConnectionCallbacks(this.errorCallbacks);
 	        this.handshakeCallbacks = this.buildHandshakeCallbacks(this.errorCallbacks);
 	        var Network = runtime_1["default"].getNetwork();
 	        Network.bind("online", function () {
@@ -45080,9 +45086,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	        }
 	    };
 	    ;
-	    ConnectionManager.prototype.buildConnectionCallbacks = function () {
+	    ConnectionManager.prototype.buildConnectionCallbacks = function (errorCallbacks) {
 	        var _this = this;
-	        return {
+	        return Collections.extend({}, errorCallbacks, {
 	            message: function (message) {
 	                _this.resetActivityCheck();
 	                _this.emit('message', message);
@@ -45102,7 +45108,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    _this.retryIn(1000);
 	                }
 	            }
-	        };
+	        });
 	    };
 	    ;
 	    ConnectionManager.prototype.buildHandshakeCallbacks = function (errorCallbacks) {
@@ -57252,7 +57258,7 @@ var render = function() {
             _vm.notifications.length == 0
               ? _c("li", [
                   _vm._v(
-                    "\n                There is no new notifications\n                "
+                    "\r\n                There is no new notifications\r\n                "
                   )
                 ])
               : _vm._e()

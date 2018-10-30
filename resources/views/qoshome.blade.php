@@ -60,15 +60,15 @@
                                         <strong>2018 1st Half Performance</strong>
                                     </p>
                                     <div class="chart-responsive">
-                                        <canvas id="salesChart" height="350px"></canvas>
+                                        <img src="{{ asset('homepublic/website icons/Picture1.png')}}" style="width:100%;padding: 20px;margin-left:60px;">
                                     </div>
                                 </div>
-                                <div class="col-md-5 col-lg-7">
-                                    <p class="text-center">
-                                        <strong>2018 1st Half Performance</strong>
+                                <div class="col-md-5">
+                                    <p class="text-center"  style="margin-left:120px;">
+                                        <strong>2018 2nd Half Performance</strong>
                                     </p>
                                     <div class="chart-responsive">
-                                        <img src="{{ asset('homepublic/website icons/Picture1.png')}}" style="width:100%;padding-left: 100px;">
+                                        <img src="{{ asset('homepublic/website icons/Picture1.png')}}" style="width:100%;padding: 20px;margin-left:120px;">
                                     </div>
                                 </div>
                             </div>
@@ -173,8 +173,7 @@
                             </ul>
                         </div>
                         <div class="box-footer text-center"><a class="btn btn-sm btn-info btn-flat" data-toggle="modal"
-                                data-target="#compose-modal"><em class="fa fa-pencil"></em> Compose Message</a><!-- /.Model Content -->
-
+                                data-target="#compose-modal"><em class="fa fa-pencil"></em> Compose Message</a>
                             <a href="javascript::;" class="btn btn-sm btn-info btn-flat">View all Message</a>
                         </div>
                     </div>
@@ -186,32 +185,29 @@
                             <div class="box-header with-border">
                                 <h3 class="box-title">ITHD Stars</h3>
                                 <div class="box-tools pull-right">
-                                    <span class="label label-danger" style="height: 30px;padding-top: 5px;font-size: 15px;">June
+                                    <span class="label label-danger" style="height: 30px;padding-top: 5px;font-size: 15px;">September
                                         Stars</span>
                                 </div>
                             </div>
                             <div class="box-body no-padding">
                                 <ul class="users-list clearfix" style="padding-left: 100px;">
                                     <li>
-                                        <img src="{{asset('homepublic/dist/img/210.bmp')}}" alt="User Image" />
-                                        <a class="users-list-name" href="#" data-toggle="modal" data-target="#Star-modal">Fares</a>
-                                        <span class="users-list-date">Extra Task Star</span>
-                                        <a href="Agent.html"><img src="{{asset('homepublic/website icons/thumbs-up-icon-blue-md.png')}}"
+                                        <img class="img-circle" style="height:75px;width:90px;cursor: pointer;" src="{{ asset('storage/'.$ithdData[0][0]->imagelocation)}}" onerror="this.src='{{asset('homepublic/dist/img/210.bmp')}}'"alt="User Image" data-toggle="modal" data-target="#Star-modal" />
+                                        {{$ithdData[0][0]->name}}
+                                        <a style="cursor: auto"><img src="{{asset('homepublic/website icons/thumbs-up-icon-blue-md.png')}}"
                                                 width:"30px" height="30px;"></a><span class="label label-success" style="font-size: 15px;">5</span>
                                     </li>
                                     <li>
-                                        <img src="{{asset('homepublic/dist/img/210.bmp')}}" alt="User Image" />
-                                        <a class="users-list-name" href="#" data-toggle="modal" data-target="#Star-modal">Shawky</a>
-                                        <span class="users-list-date">Vanilla Resolution Star</span>
-                                        <a href="Agent.html"><img src="{{asset('homepublic/website icons/thumbs-up-icon-blue-md.png')}}"
+                                        <img class="img-circle" style="height:75px;width:90px;cursor: pointer;" src="{{ asset('storage/'.$ithdData[1][0]->imagelocation)}}" onerror="this.src='{{asset('homepublic/dist/img/210.bmp')}}'"alt="User Image" data-toggle="modal" data-target="#Star-modaltwo" />
+                                        {{$ithdData[1][0]->name}}
+                                        <a style="cursor: auto"><img src="{{asset('homepublic/website icons/thumbs-up-icon-blue-md.png')}}"
                                                 width:"30px" height="30px;"></a><span class="label label-success" style="font-size: 15px;">5</span>
                                     </li>
                                     <li>
-                                        <img src="{{asset('homepublic/dist/img/210.bmp')}}" alt="User Image" />
-                                        <a class="users-list-name" href="#" data-toggle="modal" data-target="#Star-modal">Andrew</a>
-                                        <span class="users-list-date"> Plazza Star</span>
-                                        <a href="Agent.html"><img src="{{asset('homepublic/website icons/thumbs-up-icon-blue-md.png')}}"
-                                                width:"30px" height="30px;"></a><span class="label label-success" style="font-size: 15px;">5</span>
+                                        <img class="img-circle" style="height:75px;width:90px;cursor: pointer;" src="{{ asset('storage/'.$ithdData[2][0]->imagelocation)}}" onerror="this.src='{{asset('homepublic/dist/img/210.bmp')}}'" alt="User Image" data-toggle="modal" data-target="#Star-modalthree" />
+                                        {{$ithdData[2][0]->name}}
+                                        <a style="cursor:auto"><img src="{{asset('homepublic/website icons/thumbs-up-icon-blue-md.png')}}"
+                                                style="height: 30px; width: 30px;"></a><span class="label label-success" style="font-size: 15px;">5</span>
                                     </li>
                                 </ul>
                             </div>
@@ -239,6 +235,9 @@
                             <strong><button style="height: 40px; width: 400px; background-color: #FF7900; color: white; font-size: 16px; margin: 40px;">Mentors
                                     and Shift Leads Evaluation</button></strong>
                             </strong>
+                            <form action="{{route('fireevent')}}" method="get">
+                                <strong><button style="height: 40px; width: 400px; background-color: #FF7900; color: white; font-size: 16px; margin: 0 40px;">Fire Notification Test</button>
+                                </strong></form>
                             <div>&nbsp;</div>
                         </div>
                     </div>
@@ -255,9 +254,12 @@
                 </div>
             </div>
         </section>
+    </section>
 </div>
 
+@endsection
 
+@section('contenttwo')
 <!-- COMPOSE MESSAGE MODAL -->
 <div class="modal fade" id="compose-modal" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog">
@@ -307,24 +309,83 @@
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 <h4 class="modal-title"><i class="fa fa-user-o"></i> Select ITHD Star</h4>
             </div>
-            <form action="#" method="post">
+            <form action="{{route('ithdstars')}}" method="post">
+                @csrf
                 <div class="modal-body">
                     <div class="form-group">
                         <select class="form-control" name="Agent_Name">
                             <option value=" ">Please select agent name:</option>
-                            @foreach($users as $users)
-                            <option value="{{ $users->id }}">{{ $users->name }}</option>
+                            @foreach($users as $user)
+                            <option value="{{ $user->id }}">{{ $user->name }}</option>
                             @endforeach
                         </select>
                     </div>
-            </form>
+                </div>
+                <input type="hidden" value="1" name="starnumber">
             <div class="modal-footer clearfix">
                 <button type="submit" class="btn btn-success btn-file"><i class="fa fa-check "></i> Apply </button>
+            </form>
                 <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-times"></i> Cancel</button>
-
             </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
+<div class="modal fade" id="Star-modaltwo" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title"><i class="fa fa-user-o"></i> Select ITHD Star</h4>
+            </div>
+            <form action="{{route('ithdstars')}}" method="post">
+                @csrf
+                <div class="modal-body">
+                    <div class="form-group">
+                        <select class="form-control" name="Agent_Name">
+                            <option value=" ">Please select agent name:</option>
+                            @foreach($users as $user)
+                            <option value="{{ $user->id }}">{{ $user->name }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                </div>
+                <input type="hidden" value="2" name="starnumber">
+            <div class="modal-footer clearfix">
+                <button type="submit" class="btn btn-success btn-file"><i class="fa fa-check "></i> Apply </button>
+            </form>
+                <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-times"></i> Cancel</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal fade" id="Star-modalthree" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title"><i class="fa fa-user-o"></i> Select ITHD Star</h4>
+            </div>
+            <form action="{{route('ithdstars')}}" method="post">
+                @csrf
+                <div class="modal-body">
+                    <div class="form-group">
+                        <select class="form-control" name="Agent_Name">
+                            <option value=" ">Please select agent name:</option>
+                            @foreach($users as $user)
+                            <option value="{{ $user->id }}">{{ $user->name }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                </div>
+                <input type="hidden" value="3" name="starnumber">
+            <div class="modal-footer clearfix">
+                <button type="submit" class="btn btn-success btn-file"><i class="fa fa-check "></i> Apply </button>
+            </form>
+                <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fa fa-times"></i> Cancel</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 @endsection

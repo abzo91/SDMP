@@ -31,18 +31,13 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
     <style>
-        .main-sidebar {
-            z-index: 1;
-        }
-        .footer {
-	background-color: black;
-	width: 100%;
-	bottom: 0px !important;
-    position: relative;
-    z-index: 2;
-	}
-	
-	.contactus {
+          .navbaricons{
+			  font-size: 150%;
+		  }
+          .notificationsize{
+            font-size: 200px;
+          }
+        .contactus {
 			color: white;
 		margin-left: 15%;
 		text-decoration: none;	
@@ -154,8 +149,8 @@ input[type=submit] {
                         <!-- Messages: style can be found in dropdown.less-->
                         <li class="dropdown messages-menu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <i class="fa fa-envelope-o"></i>
-                                <span class="label label-success">4</span>
+                                <i class="fa fa-envelope-o navbaricons"></i>
+                        <span class="label label-success">1</span>
                             </a>
                             <ul class="dropdown-menu">
                                 <li class="header">You have 4 messages</li>
@@ -166,7 +161,7 @@ input[type=submit] {
                                             <!-- start message -->
                                             <a href="#">
                                                 <div class="pull-left">
-                                                    <img src="{{ asset('homepublic/dist/img/user2-160x160.jpg')}}"
+                                                    <img src="{{ asset('storage/noimage.jpg')}}"
                                                         class="img-circle" alt="User Image" />
                                                 </div>
                                                 <h4>
@@ -176,58 +171,6 @@ input[type=submit] {
                                                 <p>This is a Test Message :)</p>
                                             </a>
                                         </li><!-- end message -->
-                                        <li>
-                                            <a href="#">
-                                                <div class="pull-left">
-                                                    <img src="{{ asset('homepublic/dist/img/user3-128x128.jpg')}}"
-                                                        class="img-circle" alt="user image" />
-                                                </div>
-                                                <h4>
-                                                    AdminLTE Design Team
-                                                    <small><i class="fa fa-clock-o"></i> 2 hours</small>
-                                                </h4>
-                                                <p>This is a Test Message :)</p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <div class="pull-left">
-                                                    <img src="{{ asset('homepublic/dist/img/user4-128x128.jpg')}}"
-                                                        class="img-circle" alt="user image" />
-                                                </div>
-                                                <h4>
-                                                    Developers
-                                                    <small><i class="fa fa-clock-o"></i> Today</small>
-                                                </h4>
-                                                <p>This is a Test Message :)</p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <div class="pull-left">
-                                                    <img src="{{ asset('homepublic/dist/img/user3-128x128.jpg')}}"
-                                                        class="img-circle" alt="user image" />
-                                                </div>
-                                                <h4>
-                                                    Sales Department
-                                                    <small><i class="fa fa-clock-o"></i> Yesterday</small>
-                                                </h4>
-                                                <p>This is a Test Message :)</p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <div class="pull-left">
-                                                    <img src="{{ asset('homepublic/dist/img/user4-128x128.jpg')}}"
-                                                        class="img-circle" alt="user image" />
-                                                </div>
-                                                <h4>
-                                                    Reviewers
-                                                    <small><i class="fa fa-clock-o"></i>2 days</small>
-                                                </h4>
-                                                <p>This is a Test Message :)</p>
-                                            </a>
-                                        </li>
                                     </ul>
                                 </li>
                                 <li class="footer"><a href="#">See All Messages</a></li>
@@ -298,22 +241,22 @@ input[type=submit] {
                         <ul class="treeview-menu">
                             <span class="label label-primary pull-right" style="padding-top: 10px;">150</span>
 
-                            <li><a href="index2.html"><i class="fa fa-square-o"></i>Score Card</a></li>
+                            <li><a href="index2.html"><i class="fa fa-certificate"></i>Score Card</a></li>
 
-                            <li><a href="{{route('co_creation')}}"><i class="fa fa-square-o"></i>Call Reports Per Month</a></li>
-                            <li><a href="{{route('qos_creation')}}"><i class="fa fa-square-o"></i>QOS Dashboard</a></li>
-                            <li><a href="index2.html"><i class="fa fa-square-o"></i>Survey Feedback</a></li>
+                            <li><a href="{{route('co_creation')}}"><i class="fa fa-certificate"></i>Call Reports Per Month</a></li>
+                            <li><a href="{{route('qos_creation')}}"><i class="fa fa-certificate"></i>QOS Dashboard</a></li>
+                            <li><a href="index2.html"><i class="fa fa-certificate"></i>Survey Feedback</a></li>
                         </ul>
                     </li>
                     <li class="treeview"><a href="#"> <em class="fa fa-line-chart"></em> <span>ITHD Performance</span><em
                                 class="fa fa-angle-left pull-right"></em> </a>
                         <ul class="treeview-menu">
-                            <li><a href="index2.html"><i class="fa fa-square-o"></i>ITHD Stars</a></li>
-                            <li><a href="index2.html"><i class="fa fa-square-o"></i>ITHD Benchmark</a></li>
-                            <li><a href="index2.html"><i class="fa fa-square-o"></i>ITHD KPI</a></li>
-                            <li><a href="index2.html"><i class="fa fa-square-o"></i>Mentors and Shiftlead's evaluation</a></li>
-                            <li><a href="index2.html"><i class="fa fa-square-o"></i>ITHD Plazza Report</a></li>
-                            <li><a href="index2.html"><i class="fa fa-square-o"></i>ITHD Newcomer Report</a></li>
+                            <li><a href="index2.html"><i class="fa fa-certificate"></i>ITHD Stars</a></li>
+                            <li><a href="index2.html"><i class="fa fa-certificate"></i>ITHD Benchmark</a></li>
+                            <li><a href="index2.html"><i class="fa fa-certificate"></i>ITHD KPI</a></li>
+                            <li><a href="index2.html"><i class="fa fa-certificate"></i>Mentors and Shiftlead's evaluation</a></li>
+                            <li><a href="index2.html"><i class="fa fa-certificate"></i>ITHD Plazza Report</a></li>
+                            <li><a href="index2.html"><i class="fa fa-certificate"></i>ITHD Newcomer Report</a></li>
 
                         </ul>
                     </li>
@@ -338,9 +281,9 @@ input[type=submit] {
                     </li>
                     <li class="header" style="color: white;font-size: 15px;">Tools</li>
                     <li><a href="#"><i class="fa fa-coffee"></i> BMT</a></li>
-                    <li><a href="#"><i class="fa fa-calendar"></i> Schedule </a></li>
+                    <li><a href="#"><i class="fa fa-calendar"></i> Schedule</a></li>
                     <li><a href="#"><i class="fa fa-clock-o"></i> Work Plan</a></li>
-                    <li><a href="#"><i class="fa fa-clock-o"></i> End of Shift</a></li>
+                    <li><a href="{{route('administrator')}}"></i> Admin Page</a></li>
                     </li>
                     <!-- /.sidebar -->
                 </ul>
@@ -371,30 +314,22 @@ input[type=submit] {
         <script src="{{ asset('homepublic/plugins/slimScroll/jquery.slimscroll.min.js')}}" type="text/javascript"></script>
         <!-- ChartJS 1.0.1 -->
         <script src="{{ asset('homepublic/plugins/chartjs/Chart.min.j')}}s" type="text/javascript"></script>
-
-        <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-        <!--
-    <script src="{{ asset('homepublic/dist/js/pages/dashboard2.js')}}" type="text/javascript"></script>
-    -->
         <!-- AdminLTE for demo purposes -->
+        <div>
+            <footer class="main-footer" style="background-color: black !important;">
+                <div>
+                    <a href="#" class="policy">Security Policy</a>
+                    <a href="#" class="contactus">Contact Us </a>
+                    <a href="#" class="support">Support</a>
+                    <a href="#" class="support">About</a>
+                </div>
+                <div class="copyright">
+                    <p style="color: white">©Developed by IT PA & UE Team </p>
+                </div>
+            </footer>
+        </div>
     </div>
+    @yield('contenttwo')
 </body>
-
-
-<footer class="footer">
-    &nbsp;
-    <div class="footericons">
-        <a href="#" class="policy">Security Policy</a>
-        <a href="#" class="contactus">Contact Us </a>
-        <a href="#" class="support">Support</a>
-        <a href="#" class="support">About</a>
-
-    </div>
-    <div class="copyright">
-        <p style="color: white"> &nbsp; &nbsp; ©Developed by IT PA & UE Team </p>
-
-    </div>
-
-</footer>
 
 </html>

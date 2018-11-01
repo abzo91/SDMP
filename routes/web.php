@@ -11,17 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    if(Auth::check()) {
-        if(Auth::user()->role_id == 1) {
-            return view('qoshome');
-        } else {
-            return view('home');
-        }
-    } else {
-        return view('auth.login');
-    }
-});
+Route::get('/', 'HomeController@index');
 
 Auth::routes();
 
@@ -38,7 +28,10 @@ Route::get('/alertbox', function () {
     return view('home');
 });
 
-Route::get('fireevent', 'NotificationsAll@index');
+Route::get('fireevent', [
+    'as' => 'fireevent',
+    'uses' => 'NotificationsAll@index'
+]);
 
 Route::get('administration', [
     'as' => 'administrator',
@@ -82,4 +75,9 @@ Route::post('qos_creation', [
 Route::post('imageupload', [
     'as' => 'imageupload',
     'uses' => 'ImageUploadController@store'
+]);
+
+Route::post('ithdstars', [
+    'as' => 'ithdstars',
+    'uses' => 'ITHDStarsController@store'
 ]);

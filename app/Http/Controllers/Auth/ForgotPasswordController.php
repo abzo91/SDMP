@@ -46,11 +46,13 @@ class ForgotPasswordController extends Controller
                 ]);
                 $name = $search[0]['displayname']['0'];
                 $ftid = $search[0]['cn']['0'];
+                $imagelocation = "noimage.jpg";
                 try {
                     $validatedData['name'] = $name;
                     $validatedData['ftid'] = $ftid;
                     $validatedData['password'] = str_random(30);
                     $validatedData['email'] = strtolower($validatedData['email']);
+                    $validatedData['imagelocation'] = $imagelocation;
                     $user = app(User::class)->create($validatedData);
                     $this->validateEmail($request);
                     $response = $this->broker()->sendResetLink(

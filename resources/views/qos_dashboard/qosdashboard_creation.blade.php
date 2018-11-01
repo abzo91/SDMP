@@ -6,7 +6,7 @@
         <h1>Your Personal KPIs </h1>
     </section>
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-12" style="min-height: 86.5vh;">
             <div class="box">
                 <div class="box-header with-border">
                     <h3 style="color:#ff7900; text-align: center; font-weight: 600;font-size: 40px;">Add Record</h3>
@@ -37,7 +37,7 @@
                                 <label style="color: orangered;">*</label>
                             </div>
                             <div class="col-75">
-                                <select name="Category" class="form-control select2" style="width: 100%; margin-top: 10px;">
+                                <select name="Category" style="border-radius: 10px; box-shadow:inset 0 0 5px #000000;">
                                     <option value="Thank_you_mail" selected="selected">Thank you mail</option>
                                     <option value="Mishandle_Plazza">Mishandle Plazza</option>
                                     <option value="Misroute_Ticket">Misroute Ticket</option>
@@ -56,6 +56,7 @@
                                 <input name="Title" type="text" placeholder="Reference " style="border-radius: 10px; box-shadow:inset 0 0 5px #000000;">
                             </div>
                         </div>
+                        
                         <div class="row">
                             <div class="col-25">
                                 <label>Agent Name</label><label style="color: orangered;">*</label>
@@ -69,16 +70,36 @@
                                 </select>
                             </div>
                         </div>
+                        
                         <div class="row">
                             <div class="col-25">
-                                <label for="subject">Comments</label>
+                                <label for="subject">Message</label>
                             </div>
                             <div class="col-75">
                                 <textarea id="subject" name="Comments" placeholder="Write something.." style="height:200px; border-radius: 10px; box-shadow:inset 0 0 5px #000000;"></textarea>
                             </div>
                         </div>
-                </div>
-                <div style="margin-top: 40px; float: right; margin-right: 13%">
+                        <div class="row">
+                            <div class="col-25">
+                                <label>Action Taken</label>
+                                <label style="color: orangered;">*</label>
+                            </div>
+                            <div class="col-75">
+                                <input name="Title" type="text" placeholder=" " style="border-radius: 10px; box-shadow:inset 0 0 5px #000000;">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-25">
+                                <label>Points</label>
+                                <label style="color: orangered;">*</label>
+                            </div>
+                            <div class="col-75">
+                                <input name="Title" type="text" placeholder="Points " style="border-radius: 10px; box-shadow:inset 0 0 5px #000000;">
+                            </div>
+                        </div>           
+                            </div>
+                            
+                <div style="margin-top: 40px; float: right; margin-right: 13%;">
                     <button class="btn btn-sm btn-info btn-flat" style="width: 150px; font-size: 20px;">Save</button>
                     <a class="btn btn-sm btn-info btn-flat" style="width: 150px; font-size: 20px; margin-left: 30px; ">Cancel</a>
                 </div>

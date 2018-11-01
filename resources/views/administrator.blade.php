@@ -1,7 +1,7 @@
-@extends('layouts.homeapp')
+@extends('layouts.qoshomeapp')
 
 @section('content')
-  <div class="content-wrapper">
+  <div class="content-wrapper" style="margin-top:13px;">
     <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
@@ -49,7 +49,7 @@
         <button type="submit" class="btn" style="background-color: #222d32;color:white;">Save Changes</button>
         </div>
       </form>
-      <div class="btn btn-sm btn-flat" style="margin-top:15px;">
+      <div class="btn btn-sm btn-flat" style="margin-top:15px;height: 75px;">
       <form method="POST" action="{{ route('ldapupdate') }}">
         @csrf
         <button type="submit" class="btn" style="background-color: #222d32;color:white;">Update all users from Active Directory</button>

@@ -30,6 +30,12 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
 	  <style>
+       .navbaricons{
+			  font-size: 150%;
+		  }
+      .notificationsize{
+            font-size: 200px;
+          }
         .main-sidebar {
             z-index: 1;
         }
@@ -150,77 +156,31 @@ input[type=submit] {
               <!-- Messages: style can be found in dropdown.less-->
               <li class="dropdown messages-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  <i class="fa fa-envelope-o"></i>
-                  <span class="label label-success">4</span>
+                  <i class="fa fa-envelope-o navbaricons"></i>
+                  <span class="label label-success">1</span>
                 </a>
                 <ul class="dropdown-menu">
-                  <li class="header">You have 4 messages</li>
-                  <li>
-                    <!-- inner menu: contains the actual data -->
-                    <ul class="menu">
-                      <li><!-- start message -->
-                        <a href="#">
-                          <div class="pull-left">
-                            <img src="{{ asset('homepublic/dist/img/user2-160x160.jpg')}}" class="img-circle" alt="User Image"/>
-                          </div>
-                          <h4>
-                            Support Team
-                            <small><i class="fa fa-clock-o"></i> 5 mins</small>
-                          </h4>
-                          <p>This is a Test Message :)</p>
-                        </a>
-                      </li><!-- end message -->
-                      <li>
-                        <a href="#">
-                          <div class="pull-left">
-                            <img src="{{ asset('homepublic/dist/img/user3-128x128.jpg')}}" class="img-circle" alt="user image"/>
-                          </div>
-                          <h4>
-                            AdminLTE Design Team
-                            <small><i class="fa fa-clock-o"></i> 2 hours</small>
-                          </h4>
-                          <p>This is a Test Message :)</p>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <div class="pull-left">
-                            <img src="{{ asset('homepublic/dist/img/user4-128x128.jpg')}}" class="img-circle" alt="user image"/>
-                          </div>
-                          <h4>
-                            Developers
-                            <small><i class="fa fa-clock-o"></i> Today</small>
-                          </h4>
-                          <p>This is a Test Message :)</p>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <div class="pull-left">
-                            <img src="{{ asset('homepublic/dist/img/user3-128x128.jpg')}}" class="img-circle" alt="user image"/>
-                          </div>
-                          <h4>
-                            Sales Department
-                            <small><i class="fa fa-clock-o"></i> Yesterday</small>
-                          </h4>
-                          <p>This is a Test Message :)</p>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <div class="pull-left">
-                            <img src="{{ asset('homepublic/dist/img/user4-128x128.jpg')}}" class="img-circle" alt="user image"/>
-                          </div>
-                          <h4>
-                            Reviewers
-                            <small><i class="fa fa-clock-o"></i> 2 days</small>
-                          </h4>
-                          <p>This is a Test Message :)</p>
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="footer"><a href="#">See All Messages</a></li>
+                    <li class="header">You have 4 messages</li>
+                    <li>
+                        <!-- inner menu: contains the actual data -->
+                        <ul class="menu">
+                            <li>
+                                <!-- start message -->
+                                <a href="#">
+                                    <div class="pull-left">
+                                        <img src="{{ asset('storage/noimage.jpg')}}"
+                                            class="img-circle" alt="User Image" />
+                                    </div>
+                                    <h4>
+                                        Support Team
+                                        <small><i class="fa fa-clock-o"></i> 5 mins</small>
+                                    </h4>
+                                    <p>This is a Test Message :)</p>
+                                </a>
+                            </li><!-- end message -->
+                        </ul>
+                    </li>
+                    <li class="footer"><a href="#">See All Messages</a></li>
                 </ul>
               </li>
               <!-- Notifications: style can be found in dropdown.less -->
@@ -284,21 +244,21 @@ input[type=submit] {
          <li class="treeview"><a href="#"> <em class="fa fa-home" style="font-size: 20px;"></em> <span>Home </span><em class="fa fa-angle-left pull-right"></em> </a>
               
               <ul class="treeview-menu">
-                <li><a href="index2.html"><em class="fa fa-square-o"></em> Personal KPI</a></li>
+                <li><a href="index2.html"><em class="fa fa-certificate"></em> Personal KPI</a></li>
                 <span class="label label-primary pull-right" style="padding-top: 10px;">150</span>
 				  
-				  <li><a href="index2.html"><i class="fa fa-square-o"></i>Score Card</a></li>
+				  <li><a href="index2.html"><i class="fa fa-certificate"></i>Score Card</a></li>
 				   
-				  <li><a href="index2.html"><i class="fa fa-square-o"></i>Call Reports Per Month</a></li>
-				  <li><a href="index2.html"><i class="fa fa-square-o"></i>QOS Dashboard </a></li>
+				  <li><a href="index2.html"><i class="fa fa-certificate"></i>Call Reports Per Month</a></li>
+				  <li><a href="index2.html"><i class="fa fa-certificate"></i>QOS Dashboard </a></li>
               </ul>
             </li>
             <li class="treeview"><a href="#"> <em class="fa fa-line-chart"></em> <span>ITHD Performance </span><em class="fa fa-angle-left pull-right"></em> </a>
               <ul class="treeview-menu">
-                <li><a href="index2.html"><i class="fa fa-square-o"></i>ITHD Stars</a></li>
-                <li><a href="index2.html"><i class="fa fa-square-o"></i>ITHD Benchmark</a></li>
-                <li><a href="index2.html"><i class="fa fa-square-o"></i>ITHD KPI</a></li>
-				  <li><a href="index2.html"><i class="fa fa-square-o"></i>ITHD Plazza Report</a></li>
+                <li><a href="index2.html"><i class="fa fa-certificate"></i>ITHD Stars</a></li>
+                <li><a href="index2.html"><i class="fa fa-certificate"></i>ITHD Benchmark</a></li>
+                <li><a href="index2.html"><i class="fa fa-certificate"></i>ITHD KPI</a></li>
+				  <li><a href="index2.html"><i class="fa fa-certificate"></i>ITHD Plazza Report</a></li>
 				  
               </ul>
             </li>
@@ -328,56 +288,49 @@ input[type=submit] {
 			  </li>
         <!-- /.sidebar -->
 			</ul>
-			  </section>
-      </aside>
-      @yield('content')
-      <!-- jQuery 2.1.3 -->
-    <script src="{{ asset('homepublic/plugins/jQuery/jQuery-2.1.3.min.js')}}"></script>
-    <!-- Bootstrap 3.3.2 JS -->
-    <script src="{{ asset('homepublic/bootstrap/js/bootstrap.min.js')}}" type="text/javascript"></script>
-    <!-- FastClick -->
-    <script src="{{ asset('homepublic/plugins/fastclick/fastclick.min.js')}}"></script>
-    <!-- AdminLTE App -->
-    <script src="{{ asset('js/app.js') }}" charset="utf-8"></script>
-    <script src="{{ asset('homepublic/dist/js/app.min.js')}}" type="text/javascript"></script>
-    <!-- Sparkline -->
-    <script src="{{ asset('homepublic/plugins/sparkline/jquery.sparkline.min.js')}}" type="text/javascript"></script>
-    <!-- jvectormap -->
-    <script src="{{ asset('homepublic/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js')}}" type="text/javascript"></script>
-    <script src="{{ asset('homepublic/plugins/jvectormap/jquery-jvectormap-world-mill-en.js')}}" type="text/javascript"></script>
-    <!-- daterangepicker -->
-    <script src="{{ asset('homepublic/plugins/daterangepicker/daterangepicker.js')}}" type="text/javascript"></script>
-    <!-- datepicker -->
-    <script src="{{ asset('homepublic/plugins/datepicker/bootstrap-datepicker.js')}}" type="text/javascript"></script>
-    <!-- iCheck -->
-    <script src="{{ asset('homepublic/plugins/iCheck/icheck.min.js')}}" type="text/javascript"></script>
-    <!-- SlimScroll 1.3.0 -->
-    <script src="{{ asset('homepublic/plugins/slimScroll/jquery.slimscroll.min.js')}}" type="text/javascript"></script>
-    <!-- ChartJS 1.0.1 -->
-    <script src="{{ asset('homepublic/plugins/chartjs/Chart.min.j')}}s" type="text/javascript"></script>
+      </section>
+        </aside>
+        @yield('content')
+        <!-- jQuery 2.1.3 -->
+        <script src="{{ asset('homepublic/plugins/jQuery/jQuery-2.1.3.min.js')}}"></script>
+        <!-- Bootstrap 3.3.2 JS -->
+        <script src="{{ asset('homepublic/bootstrap/js/bootstrap.min.js')}}" type="text/javascript"></script>
+        <!-- FastClick -->
+        <script src="{{ asset('homepublic/plugins/fastclick/fastclick.min.js')}}"></script>
+        <!-- AdminLTE App -->
+        <script src="{{ asset('js/app.js') }}" charset="utf-8"></script>
+        <script src="{{ asset('homepublic/dist/js/app.min.js')}}" type="text/javascript"></script>
+        <!-- Sparkline -->
+        <script src="{{ asset('homepublic/plugins/sparkline/jquery.sparkline.min.js')}}" type="text/javascript"></script>
+        <!-- jvectormap -->
+        <script src="{{ asset('homepublic/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js')}}" type="text/javascript"></script>
+        <script src="{{ asset('homepublic/plugins/jvectormap/jquery-jvectormap-world-mill-en.js')}}" type="text/javascript"></script>
+        <!-- daterangepicker -->
+        <script src="{{ asset('homepublic/plugins/daterangepicker/daterangepicker.js')}}" type="text/javascript"></script>
+        <!-- datepicker -->
+        <script src="{{ asset('homepublic/plugins/datepicker/bootstrap-datepicker.js')}}" type="text/javascript"></script>
+        <!-- iCheck -->
+        <script src="{{ asset('homepublic/plugins/iCheck/icheck.min.js')}}" type="text/javascript"></script>
+        <!-- SlimScroll 1.3.0 -->
+        <script src="{{ asset('homepublic/plugins/slimScroll/jquery.slimscroll.min.js')}}" type="text/javascript"></script>
+        <!-- ChartJS 1.0.1 -->
+        <script src="{{ asset('homepublic/plugins/chartjs/Chart.min.j')}}s" type="text/javascript"></script>
+        <!-- AdminLTE for demo purposes -->
+        <div>
+            <footer class="main-footer" style="background-color: black !important;">
+                <div>
+                    <a href="#" class="policy">Security Policy</a>
+                    <a href="#" class="contactus">Contact Us </a>
+                    <a href="#" class="support">Support</a>
+                    <a href="#" class="support">About</a>
+                </div>
+                <div class="copyright">
+                    <p style="color: white">©Developed by IT PA & UE Team </p>
+                </div>
+            </footer>
+        </div>
+    </div>
+    @yield('contenttwo')
+</body>
 
-    <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-    <script src="{{ asset('homepublic/dist/js/pages/dashboard2.js')}}" type="text/javascript"></script>
-
-    <!-- AdminLTE for demo purposes -->
-	  </div>
-  </body>
-     
-
-   	  <footer class="footer">
-  &nbsp;
-  <div class="footericons">	
-    <a href="#" class="policy">Security Policy</a>
-    <a href="#" class="contactus">Contact Us </a>
-    <a href="#" class="support">Support</a>
-	  <a href="#" class="support">About</a>
-    
-  </div>
-		<div class="copyright">
-    <p style="color: white"> &nbsp; &nbsp; ©Developed by IT PA & UE Team </p>
-  
-		</div>
-		
-</footer>
-  
 </html>

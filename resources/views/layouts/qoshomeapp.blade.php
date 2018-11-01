@@ -34,7 +34,9 @@
           .navbaricons{
 			  font-size: 150%;
 		  }
-		
+          .notificationsize{
+            font-size: 200px;
+          }
         .contactus {
 			color: white;
 		margin-left: 15%;

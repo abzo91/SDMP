@@ -56,6 +56,7 @@
                                 <input name="Title" type="text" placeholder="Reference " style="border-radius: 10px; box-shadow:inset 0 0 5px #000000;">
                             </div>
                         </div>
+                        
                         <div class="row">
                             <div class="col-25">
                                 <label>Agent Name</label><label style="color: orangered;">*</label>
@@ -69,15 +70,35 @@
                                 </select>
                             </div>
                         </div>
+                        
                         <div class="row">
                             <div class="col-25">
-                                <label for="subject">Comments</label>
+                                <label for="subject">Message</label>
                             </div>
                             <div class="col-75">
                                 <textarea id="subject" name="Comments" placeholder="Write something.." style="height:200px; border-radius: 10px; box-shadow:inset 0 0 5px #000000;"></textarea>
                             </div>
                         </div>
-                </div>
+                        <div class="row">
+                            <div class="col-25">
+                                <label>Action Taken</label>
+                                <label style="color: orangered;">*</label>
+                            </div>
+                            <div class="col-75">
+                                <input name="Title" type="text" placeholder=" " style="border-radius: 10px; box-shadow:inset 0 0 5px #000000;">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-25">
+                                <label>Points</label>
+                                <label style="color: orangered;">*</label>
+                            </div>
+                            <div class="col-75">
+                                <input name="Title" type="text" placeholder="Points " style="border-radius: 10px; box-shadow:inset 0 0 5px #000000;">
+                            </div>
+                        </div>           
+                            </div>
+                            
                 <div style="margin-top: 40px; float: right; margin-right: 13%;">
                     <button class="btn btn-sm btn-info btn-flat" style="width: 150px; font-size: 20px;">Save</button>
                     <a class="btn btn-sm btn-info btn-flat" style="width: 150px; font-size: 20px; margin-left: 30px; ">Cancel</a>

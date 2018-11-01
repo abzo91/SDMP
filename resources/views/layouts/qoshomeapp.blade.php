@@ -235,22 +235,22 @@ input[type=submit] {
                         <ul class="treeview-menu">
                             <span class="label label-primary pull-right" style="padding-top: 10px;">150</span>
 
-                            <li><a href="index2.html"><i class="fa fa-square-o"></i>Score Card</a></li>
+                            <li><a href="index2.html"><i class="fa fa-certificate"></i>Score Card</a></li>
 
-                            <li><a href="{{route('co_creation')}}"><i class="fa fa-square-o"></i>Call Reports Per Month</a></li>
-                            <li><a href="{{route('qos_creation')}}"><i class="fa fa-square-o"></i>QOS Dashboard</a></li>
-                            <li><a href="index2.html"><i class="fa fa-square-o"></i>Survey Feedback</a></li>
+                            <li><a href="{{route('co_creation')}}"><i class="fa fa-certificate"></i>Call Reports Per Month</a></li>
+                            <li><a href="{{route('qos_creation')}}"><i class="fa fa-certificate"></i>QOS Dashboard</a></li>
+                            <li><a href="index2.html"><i class="fa fa-certificate"></i>Survey Feedback</a></li>
                         </ul>
                     </li>
                     <li class="treeview"><a href="#"> <em class="fa fa-line-chart"></em> <span>ITHD Performance</span><em
                                 class="fa fa-angle-left pull-right"></em> </a>
                         <ul class="treeview-menu">
-                            <li><a href="index2.html"><i class="fa fa-square-o"></i>ITHD Stars</a></li>
-                            <li><a href="index2.html"><i class="fa fa-square-o"></i>ITHD Benchmark</a></li>
-                            <li><a href="index2.html"><i class="fa fa-square-o"></i>ITHD KPI</a></li>
-                            <li><a href="index2.html"><i class="fa fa-square-o"></i>Mentors and Shiftlead's evaluation</a></li>
-                            <li><a href="index2.html"><i class="fa fa-square-o"></i>ITHD Plazza Report</a></li>
-                            <li><a href="index2.html"><i class="fa fa-square-o"></i>ITHD Newcomer Report</a></li>
+                            <li><a href="index2.html"><i class="fa fa-certificate"></i>ITHD Stars</a></li>
+                            <li><a href="index2.html"><i class="fa fa-certificate"></i>ITHD Benchmark</a></li>
+                            <li><a href="index2.html"><i class="fa fa-certificate"></i>ITHD KPI</a></li>
+                            <li><a href="index2.html"><i class="fa fa-certificate"></i>Mentors and Shiftlead's evaluation</a></li>
+                            <li><a href="index2.html"><i class="fa fa-certificate"></i>ITHD Plazza Report</a></li>
+                            <li><a href="index2.html"><i class="fa fa-certificate"></i>ITHD Newcomer Report</a></li>
 
                         </ul>
                     </li>

@@ -31,6 +31,10 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
     <style>
+          .navbaricons{
+			  font-size: 150%;
+		  }
+		
         .contactus {
 			color: white;
 		margin-left: 15%;
@@ -143,8 +147,8 @@ input[type=submit] {
                         <!-- Messages: style can be found in dropdown.less-->
                         <li class="dropdown messages-menu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <i class="fa fa-envelope-o"></i>
-                                <span class="label label-success">1</span>
+                                <i class="fa fa-envelope-o navbaricons"></i>
+                        <span class="label label-success">1</span>
                             </a>
                             <ul class="dropdown-menu">
                                 <li class="header">You have 4 messages</li>
